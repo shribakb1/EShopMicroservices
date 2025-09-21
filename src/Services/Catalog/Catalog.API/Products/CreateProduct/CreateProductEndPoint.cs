@@ -27,7 +27,6 @@ namespace Catalog.API.Products.CreateProduct
             .ProducesProblem(StatusCodes.Status400BadRequest)
             .WithSummary("Create Product")
             .WithDescription("Creates a new product.");
-
         }   
     }
 }
