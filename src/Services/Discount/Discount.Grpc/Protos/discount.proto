@@ -10,7 +10,7 @@ service DiscountProtoService {
   rpc UpdateDiscount (UpdateDiscountRequest) returns (CouponModel);
   rpc DeleteDiscount (DeleteDiscountRequest) returns (DeleteDiscountResponse);
 }
-
+ 
 message GetDiscountRequest {
   string product_name = 1;
 }
