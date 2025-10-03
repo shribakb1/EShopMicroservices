@@ -1,5 +1,5 @@
 ﻿
-namespace Ordering.API.Abstractions
+namespace Ordering.Domain.Abstractions
 {
     public abstract class Entity<T> : IEntity<T>
     {

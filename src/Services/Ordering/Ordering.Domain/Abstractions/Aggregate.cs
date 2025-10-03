@@ -1,5 +1,5 @@
 ﻿
-namespace Ordering.API.Abstractions
+namespace Ordering.Domain.Abstractions
 {
     public class Aggregate<TId> : Entity<TId>, IAggragate<TId>
     {
