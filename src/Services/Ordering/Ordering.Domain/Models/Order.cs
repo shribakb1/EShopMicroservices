@@ -1,5 +1,6 @@
 ﻿using Ordering.Domain.Abstractions;
 using Ordering.Domain.Enums;
+using Ordering.Domain.Events;
 using Ordering.Domain.ValueObjects;
 
 namespace Ordering.Domain.Models
@@ -56,8 +57,6 @@ namespace Ordering.Domain.Models
             OrderItem orderItem = new OrderItem(Id, productId, quantity, price);
             
             _orderItems.Add(orderItem);
-            
-            AddDomainEvent(new OrderItemAddedEvent(this, orderItem));
         }
 
         public void Remove(OrderItemId orderItemId)
@@ -67,9 +66,7 @@ namespace Ordering.Domain.Models
             {
                 throw new InvalidOperationException($"Order item with id {orderItemId} not found in order {Id}");
             }
-            _orderItems.Remove(orderItem);
-            
-            AddDomainEvent(new OrderItemRemovedEvent(this, orderItem));
+            _orderItems.Remove(orderItem);     
         }
     }
 
