@@ -18,6 +18,7 @@ namespace Ordering.Domain.ValueObjects
             {
                 throw new DomainException("ProductId cannot be empty.");
             }
+
             return new ProductId(value);
         }
     }
