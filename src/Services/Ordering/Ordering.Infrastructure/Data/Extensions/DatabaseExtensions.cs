@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System.Net.Mime;
-
+ 
 namespace Ordering.Infrastructure.Data.Extensions
 {
     public static class DatabaseExtensions
