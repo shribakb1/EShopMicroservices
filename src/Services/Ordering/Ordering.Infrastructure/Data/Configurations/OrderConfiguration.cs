@@ -106,7 +106,7 @@ namespace Ordering.Infrastructure.Data.Configurations
                         .HasMaxLength(3)
                         .IsRequired();
 
-                    paymentBuilder.Property(p => p.PaymetnMethod);
+                    paymentBuilder.Property(p => p.PaymentMethod);
                 });
 
             builder.Property(o => o.Status)
