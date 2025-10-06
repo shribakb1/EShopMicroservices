@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Ordering.Application.Orders.Comands.UpdateOrder
@@ -20,8 +21,9 @@ namespace Ordering.Application.Orders.Comands.UpdateOrder
         {
             var orderId = OrderId.Of(command.Order.Id);
             var order = await dbContext.Orders
-                .FindAsync([orderId], cancellationToken: cancellationToken);
-
+                .Include(o => o.OrderItems)
+                .FirstOrDefaultAsync(o => o.Id == orderId, cancellationToken);
+            
             if (order is null)
             {
                 throw new OrderNotFoundException(command.Order.Id);
@@ -68,7 +70,6 @@ namespace Ordering.Application.Orders.Comands.UpdateOrder
                 billingAddress: updatedBillingAddress,
                 payment: updatedPayment,
                 status: orderDto.Status);
-
         }
     }
 }

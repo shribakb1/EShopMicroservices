@@ -156,7 +156,7 @@ namespace Ordering.Infrastructure.Data.Migrations
                                 .HasMaxLength(10)
                                 .HasColumnType("nvarchar(10)");
 
-                            b1.Property<int>("PaymetnMethod")
+                            b1.Property<int>("PaymentMethod")
                                 .HasColumnType("int");
                         });
 

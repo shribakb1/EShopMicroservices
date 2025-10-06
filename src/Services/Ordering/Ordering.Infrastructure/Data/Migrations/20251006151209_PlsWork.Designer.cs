@@ -13,8 +13,8 @@ using Ordering.Infrastructure.Data;
 namespace Ordering.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251004151028_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20251006151209_PlsWork")]
+    partial class PlsWork
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -159,7 +159,7 @@ namespace Ordering.Infrastructure.Data.Migrations
                                 .HasMaxLength(10)
                                 .HasColumnType("nvarchar(10)");
 
-                            b1.Property<int>("PaymetnMethod")
+                            b1.Property<int>("PaymentMethod")
                                 .HasColumnType("int");
                         });
 

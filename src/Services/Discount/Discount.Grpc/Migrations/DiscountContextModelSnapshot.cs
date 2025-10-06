@@ -36,22 +36,6 @@ namespace Discount.Grpc.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Coupons");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Amount = 0,
-                            Description = "IPhone Di",
-                            ProductName = "IPhone X"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Amount = 0,
-                            Description = "Samsung",
-                            ProductName = "Samsung 10"
-                        });
                 });
 #pragma warning restore 612, 618
         }
