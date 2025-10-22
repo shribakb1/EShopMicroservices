@@ -11,7 +11,7 @@ namespace BuildingBlocks.Messaging.MassTransit
         {
             services.AddMassTransit(config =>
             {
-                // naming conversion for endpoint order-created-event
+                // naming conversion for endpoint article-processing-queue
                 config.SetKebabCaseEndpointNameFormatter();
 
                 if (assembly != null)
